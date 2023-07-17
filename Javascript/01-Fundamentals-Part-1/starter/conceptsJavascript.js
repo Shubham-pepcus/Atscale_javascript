@@ -186,3 +186,136 @@ if (height) {
     console.log('Height is UNDEFINED');
 }
 
+//************************************************************************ */
+//13-07-2023
+//Equality Operators == vs. ===
+const theAge = '18';
+if (theAge == 18) console.log('You just became an Adult :D');// this is the loose equality operator
+if (theAge === 18) console.log('You just became an Adult :D'); // this is the strict equality operator
+
+//Prompt function 
+//SYNTAX - prompt('string');
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23)
+    console.log('Cool! 23 is an amazing number!');
+else if (favourite === 7) {
+    console.log('Cool! 7 is also an amazing number!');
+} else if (favourite === 9) {
+    console.log('Cool! 9 is also an amazing number!');
+} else {
+    console.log('Number is not 23 or 7 or 9')
+}
+// to check if the no. is different than 23 or not equal(!==)
+if (favourite !== 23) console.log('Why not 23?');
+
+//Boolean Logic are the "AND", "OR" & "NOT" operators
+//Logical Operators
+//Example#1
+const hasDriversLicense1 = true;
+const hasGoodVision1 = false;
+
+console.log(hasDriversLicense1 && hasGoodVision1);
+console.log(hasDriversLicense1 || hasGoodVision1);
+console.log(!hasDriversLicense1);
+
+if (hasDriversLicense1 && hasGoodVision1) {
+    console.log('Sarah is able to DRIVE!')
+} else {
+    console.log('Someone else should drive...')
+}
+
+//Example#2
+const hasDriversLicense2 = true;
+const hasGoodVision2 = false;
+const isTired = false;
+
+console.log(hasDriversLicense2 && hasGoodVision2 && isTired);
+console.log(hasDriversLicense2 || hasGoodVision2);
+console.log(!hasDriversLicense2);
+
+if (hasDriversLicense2 && hasGoodVision2 && !isTired) {
+    console.log('Sarah is able to DRIVE!')
+} else {
+    console.log('Someone else should drive...')
+}
+
+//Example#3
+const day1 = "monday";
+
+if (day1 === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day1 === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day1 === 'wednesday' || day1 === 'thursday') {
+    console.log('Write code examples');
+} else if (day1 === 'friday') {
+    console.log('Record videos');
+} else if (day1 === 'saturday' || day1 === 'sunday') {
+    console.log('Enjoy the weekend :D');
+} else {
+    console.log('Not a valid day!')
+}
+
+//************************************************************************ */
+//14-07-2023
+
+//The Switch Statement
+const day = "friday";
+
+switch (day) {
+    case 'monday': //day==='monday'
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+        break;
+    case "friday":
+        console.log('Record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend :D');
+        break
+    default:
+        console.log('Not a valid day!');
+}
+
+//Statements and Expressions
+//Expressions - It is a piece of code that produces a value
+//example: 3+4 ; 1991; true && false && !false; (23>10)
+
+//Statements - bigger piece of code that is executed but not produce any value
+//example: if/else statements that translates the actions
+
+//The Conditional/Ternary Operator
+//the ternary operator is an expression that helps us to write something similar to the if/else statement but all in one line.
+//code without the use of ternary operator
+const legalAge = 23;
+let drink1;
+if (age >= 18) {
+    drink1 = 'wine';
+} else {
+    drink1 = 'water'
+}
+console.log(drink1);
+
+//code with the use of ternary operator
+const drink2 = legalAge >= 18 ? 'wine' : 'water';
+console.log(drink2);
+
+//ternary operators can be useful to put the conditionals like if/else in the template literals
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+//if/else statements are better suited when we have a biggger block of code that we need to execute based on a condition.
+//the ternary operators are perfect when we just need to take a quick decision.
+
+//CONTINUED IN THE FUNDAMENTALS PART2 
+
